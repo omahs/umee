@@ -178,7 +178,7 @@ mkdir -p ~/.umee/cosmovisor/upgrades
 cp <path-to-umeed-binary> ~/.umee/cosmovisor/genesis/bin
 ```
 
-- For the usual use of `cosmovisor`, we recommend setting theses env variables
+- For the usual use of `cosmovisor`, we recommend setting these env variables
 
 ```shell
 export DAEMON_NAME=umeed
