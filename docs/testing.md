@@ -46,7 +46,7 @@ At Umee our Keeper tests are usually app level _integration tests_ -- this means
 
 Simulations are very high level App integration tests, where:
 
-- we only run App in it's expected setup (without the normally expected processes, like price-feeder)
+- we only run App in its expected setup (without the normally expected processes, like price-feeder)
 - App is producing blocks on the chain until a specified height is reached.
   At each block the sim test runner ([SimulateFromSeed](https://pkg.go.dev/github.com/cosmos/cosmos-sdk/x/simulation#SimulateFromSeed)) sequentially ask each module to generate random transactions (represented as operations) and execute them directly in the app transaction runner.
 - during the sim runner, we don't execute any user defined assertions. Instead we expect the chain to function correctly (don't return errors nor panics). Hence, when creating a new operation (random sim transaction), we need to check conditions to satisfy that a transaction won't be rejected (like checking bank balance etc...).
